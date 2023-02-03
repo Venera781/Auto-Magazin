@@ -1,0 +1,117 @@
+@mixin border-line {
+  border-bottom: $lime-line;
+  border-left: $lime-line;
+}
+
+@mixin font($weight, $size, $height) {
+  font-weight: $weight;
+  font-size: $size;
+  line-height: $height;
+}
+
+@mixin margin-align($top: 0, $right: auto, $bottom: 0, $left: auto) {
+  margin-top: $top;
+  margin-right: $right;
+  margin-bottom: $bottom;
+  margin-left: $left;
+  text-align: center;
+}
+
+@mixin margin-auto {
+  margin: 0 auto;
+}
+
+@mixin width-pic {
+  min-width: 100%;
+  width: 0;
+}
+
+@mixin media-tablet-image {
+  @media (max-width: 1024px) {
+    min-width: 700px;
+    max-height: 510px;
+  }
+}
+@mixin media-mobile-image {
+  @media (max-width: 425px) {
+    min-width: 280px;
+    max-height: 202px;
+  }
+}
+@mixin button-simple-size($width, $height) {
+  width: $width;
+  height: $height;
+}
+
+@mixin button-properties(
+  $width,
+  $height,
+  $bgr: #191d2c,
+  $color: #e1fd2c,
+  $border: #e1fd2c
+) {
+  width: $width;
+  height: $height;
+  background-color: $bgr;
+  color: $color;
+  border: $border;
+  padding: 0;
+  cursor: pointer;
+}
+
+@mixin btn-for-slider(
+  $file,
+  $bg-rep: no-repeat,
+  $bg-pos: center,
+  $margin-right: 30px,
+  $bg-size: 42px 34px
+) {
+  background-image: url(../../../images/#{$file});
+  background-repeat: $bg-rep;
+  background-position: $bg-pos;
+  margin-right: $margin-right;
+  background-size: $bg-size;
+}
+
+@mixin btn-burger-properties(
+  $file,
+  $bg-rep: no-repeat,
+  $bg-pos: center,
+  $right,
+  $bg-size
+) {
+  background-image: url(../../../images/#{$file});
+  background-repeat: $bg-rep;
+  background-position: $bg-pos;
+  right: $right;
+  background-size: $bg-size;
+  background-color: $bgr-color;
+  border: none;
+}
+
+@mixin hover-btn($bgr: $main-color, $color: $bgr-color) {
+  background-color: $bgr;
+  transition: opacity 0.2s linear;
+  color: $color;
+}
+
+@mixin circle-button(
+  $file,
+  $bg-rep: no-repeat,
+  $bgr-color: #191d2c,
+  $bgr-size: contain,
+  $width: 12px,
+  $height: 12px,
+  $mrg-r: 12px
+) {
+  background-image: url(../../../images/#{$file});
+  background-repeat: $bg-rep;
+  background-color: $bgr-color;
+  background-size: $bgr-size;
+  width: $width;
+  height: $height;
+  border-radius: 999px;
+  padding: 0;
+  border: none;
+  margin-right: $mrg-r;
+}

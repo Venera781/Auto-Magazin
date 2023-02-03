@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Auto-Magazine</title>
+</head>
+
+<body class="page">
+  <header class="menu">
+    <nav class="menu__nav">
+      <ul class="menu__nav-list">
+        <li class="menu__nav-item"><a class="menu__nav-link" href="#">ФАКТЫ</a></li>
+        <li class="menu__nav-item"><a class="menu__nav-link" href="#">ГАЛЕРЕЯ</a></li>
+        <li class="menu__nav-item"><a class="menu__nav-link" href="#">ПРЕССА</a></li>
+      </ul>
+    </nav>
+    <a href="#" class="logo logo_type_header"></a>
+    <button class="burger active-el" type="button" aria-pressed="false"></button>
+  </header>
+  <main class="сontent">
+    <section class="slide">
+      <p class="slide__brand">volkswagen T1</p>
+      <h1 class="slide__title">Новая версия популярного микроавтобуса</h1>
+      <h2 class="slide__subtitle">С ЭЛЕКТРО ДВИГАТЕЛЕМ</h2>
+      <button class="slide__button" type="button">Подробнее</button>
+      <img class="slide__photo" src="../images/bus.png" alt="Фото автобуса">
+    </section>
+    <section class="pros-cons">
+      <div class="pros-cons__description">
+        <p class="pros-cons__text"><span class="pros-cons__text-bold">VW T1 Electro:</span> Отделение Volkswagen
+          Commercial Vehicles представило концепт
+          e&#8209;Bulli: классический вэн T1 1966 года
+          с&nbsp;электрической силовой установкой.
+          По&nbsp;словам производителя, проект получит коммерческое продолжение, и через фирму&#8209;партнера eClassics
+          наборы для
+          конверсии микроавтобусов в электрокары
+          и&nbsp;уже готовые машины будут продавать частным клиентам.
+        </p>
+      </div>
+      <div class="pros-cons__container">
+        <div class="pros-cons__wrapper pros-cons__advantages">
+          <h2 class="pros-cons__title pros-cons__advantages-title">ПЛЮСЫ</h2>
+          <ul class="pros-cons__list pros-cons__advantages-list">
+            <li class="pros-cons__item pros-cons__advantages-item">+ Экологичный</li>
+            <li class="pros-cons__item pros-cons__advantages-item">+ Экономный</li>
+            <li class="pros-cons__item pros-cons__advantages-item">+ Тихий</li>
+          </ul>
+        </div>
+        <div class="pros-cons__wrapper pros-cons__disadvantages">
+          <h2 class="pros-cons__title pros-cons__disadvantages-title">МИНУСЫ</h2>
+          <ul class="pros-cons__list pros-cons__disadvantages-list">
+            <li class="pros-cons__item pros-cons__disadvantages-item">- Дорогой</li>
+            <li class="pros-cons__item pros-cons__disadvantages-item">- Подзарядка</li>
+          </ul>
+        </div>
+    </section>
+    <section class="gallery">
+      <div class="gallery__slider-part1">
+        <img class="gallery__photo" src="../images/bus-gallery.png" alt="Фото автобуса">
+        <div class="gallery__slider-part2">
+          <h2 class="section-title gallery__title">Галерея</h2>
+          <div class="gallery__wrapper">
+            <button type="button" class="gallery__button gallery__button_dir_left active-el"></button>
+            <button type="button" class="gallery__button gallery__button_dir_right active-el"></button>
+          </div>
+        </div>
+      </div>
+      <div class="gallery__empty-block"></div>
+    </section>
+    <section class="press">
+      <h2 class="section-title press__title">Пресса</h2>
+      <div class="press__news">
+        <p class="press__news-normal"><span class="press__news-bold">Engadget:</span> VW’s e-BULLI concept shows how
+          your classic van can become an EV.</p>
+        <div class="press__container">
+          <div class="press__wrapper">
+            <button type="button" class="press__circle-button press__circle-button_active active-el"></button>
+            <button type="button" class="press__circle-button active-el"></button>
+          </div>
+          <button type="button" class="press__button">Читать</button>
+        </div>
+    </section>
+    <section class="subscription">
+      <div class="subscription__form">
+        <h2 class="section-title subscription__title">Подписка</h2>
+        <p class="subscription__subtitle">На новые спецвыпуски машин.</p>
+        <form action="#" class="form" name="subcriptionForm">
+          <fieldset class="form__container">
+            <div class="form__wrapper">
+              <input class="form__input form__name" type="text" name="name" value="" required autocomplete="off"
+                placeholder="Имя">
+              <input class="form__input form__surname" type="text" name="surname" value="" required autocomplete="off"
+                placeholder="Фамилия">
+            </div>
+            <div class="form__wrapper">
+              <input class="form__input form__email" type="email" name="email" autocomplete="off" required
+                placeholder="Почта">
+              <button type="submit" class="button form__button">Подписка</button>
+            </div>
+          </fieldset>
+        </form>
+      </div>
+      <div class="subscription__logo">
+        <a href="#" class="logo logo_type_footer"></a>
+        <p class="subscription__copyright">&copy;&nbsp; Auto-Magazine 2021</p>
+      </div>
+    </section>
+  </main>
+</body>
+
+</html>

@@ -1,0 +1,79 @@
+.form {
+  margin-left: 0;
+
+  &__container {
+    margin: 0;
+    padding: 0;
+    box-sizing: content-box;
+    border: none;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__wrapper {
+    width: 100%;
+  }
+
+  &__input {
+    display: inline;
+    width: 169px;
+    height: 32px;
+    padding: 7px 0 7px 11px;
+    border: none;
+    background-color: inherit;
+    color: inherit;
+    box-sizing: border-box;
+    margin: 0;
+    float: left;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    @include font(400, 9px, 18px);
+
+    &::placeholder {
+      color: #e1fd2c;
+    }
+    @media (max-width: 570px) {
+      width: 140px;
+      height: 32px;
+    }
+  }
+
+  &__name {
+    border: $lime-line;
+  }
+
+  &__surname {
+    border-top: $lime-line;
+    border-right: $lime-line;
+    border-bottom: $lime-line;
+  }
+
+  &__email {
+    width: 260px;
+    height: 32px;
+    @include border-line;
+
+    @media (max-width: 570px) {
+      width: 200px;
+    }
+  }
+
+  &__button {
+    @include button-properties(
+      80px,
+      32px,
+      $bgr: $main-color,
+      $color: $bgr-color
+    );
+    @include border-line;
+    box-sizing: border-box;
+    text-align: center;
+    @include font(400, 10px, 13px);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+
+    @media (max-width: 570px) {
+      @include button-simple-size(80px, 32px);
+    }
+  }
+}

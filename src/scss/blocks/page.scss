@@ -1,0 +1,34 @@
+.page {
+  font-family: $font-family;
+  background-color: $bgr-color;
+  color: $main-color;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  text-rendering: optimizeLegibility;
+  max-width: 1440px;
+  min-width: 320px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(2, 50%);
+  grid-template-areas:
+    "menu                    menu"
+    "slide                   slide"
+    "pros-cons__description  pros-cons__container"
+    "gallery__slider-part1   gallery__empty-block"
+    "press__title            press__news"
+    "subscription__form      subscription__logo";
+
+  @media (max-width: 1280px) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  @media (max-width: 1024px) {
+    flex-direction: column;
+    margin: 0;
+  }
+}

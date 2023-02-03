@@ -1,0 +1,104 @@
+.slide {
+  grid-area: slide;
+  display: grid;
+  padding: 150px 0 150px 80px;
+  border-bottom: $lime-line;
+  grid-template-columns: 560fr 80fr 720fr;
+  grid-template-rows: 58px 30px 219px 51px 28px 60px auto;
+
+  @media (max-width: 1280px) {
+    align-items: center;
+    padding: 100px 34px;
+    grid-template-columns: 1fr;
+    grid-template-rows: 28px 30px 219px 51px 28px 100px auto 100px 64px;
+    margin: 0;
+  }
+
+  @media (max-width: 767px) {
+    padding: 60px 20px;
+    grid-template-rows: 14px 26px 150px 30px 14px 60px auto 60px 64px;
+  }
+
+  &__brand {
+    grid-row: 1/2;
+    grid-column: 1/2;
+    @include font(400, 19px, 28px);
+    @include margin-align(30px);
+    text-transform: uppercase;
+
+    @media (max-width: 1280px) {
+      @include margin-auto;
+    }
+    @media (max-width: 767px) {
+      @include font(400, 11px, 14px);
+    }
+  }
+
+  &__title {
+    grid-row: 3/4;
+    grid-column: 1/2;
+    @include font(400, 65px, 73px);
+    @include margin-align;
+
+    @media (max-width: 1280px) {
+      max-width: 560px;
+      @include margin-auto;
+    }
+    @media (max-width: 767px) {
+      max-width: 280px;
+      @include margin-auto;
+      @include font(400, 38px, 50px);
+    }
+  }
+
+  &__subtitle {
+    grid-row: 5/6;
+    grid-column: 1/2;
+    @include font(400, 19px, 28px);
+    @include margin-auto;
+
+    @media (max-width: 767px) {
+      @include font(400, 11px, 14px);
+    }
+  }
+
+  &__button {
+    grid-row: 7/8;
+    grid-column: 1/2;
+    @include button-properties(360px, 64px, $border: $lime-line);
+    @include margin-auto;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    box-sizing: border-box;
+    align-self: flex-start;
+
+    &:hover {
+      @include hover-btn;
+    }
+
+    @media (max-width: 1280px) {
+      grid-row: 9/10;
+    }
+    @media (max-width: 767px) {
+      width: 280px;
+    }
+  }
+
+  &__photo {
+    grid-row: 1/8;
+    grid-column: 3/4;
+    @include width-pic;
+
+    @media (max-width: 1280px) {
+      grid-row: 7/8;
+      grid-column: 1/2;
+      @include margin-auto;
+    }
+    @include media-tablet-image;
+
+    @media (max-width: 767px) {
+      @include width-pic;
+    }
+    @include media-mobile-image;
+  }
+}

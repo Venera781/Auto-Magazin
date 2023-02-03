@@ -1,0 +1,85 @@
+.press {
+  display: contents;
+
+  &__title {
+    grid-area: press__title;
+    border-bottom: $lime-line;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 50px;
+
+    @media (max-width: 1280px) {
+      display: none;
+    }
+  }
+
+  &__news {
+    grid-area: press__news;
+    padding: 50px 50px 50px;
+    @include border-line;
+
+    @media (max-width: 767px) {
+      border-left: none;
+      padding: 20px;
+    }
+  }
+
+  &__news-normal {
+    margin: 0 0 263px 0;
+    @include font(300, 30px, 42px);
+
+    @media (max-width: 767px) {
+      margin-bottom: 150px;
+    }
+
+    @media (max-width: 570px) {
+      @include font(300, 16px, 27px);
+    }
+  }
+
+  &__news-bold {
+    font-weight: 400;
+  }
+
+  &__wrapper {
+    display: flex;
+    align-items: flex-end;
+  }
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__circle-button {
+    @include circle-button($file: "circle_btn_disabled.png");
+  }
+
+  &__circle-button_active {
+    @include circle-button($file: "circle_btn_active.png");
+  }
+
+  &__button {
+    background-image: url(../../../images/ellipse.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-color: $bgr-color;
+    color: $main-color;
+    padding: 0;
+    border: none;
+    width: 110px;
+    height: 52px;
+    @include font(400, 19px, 28px);
+
+    &:hover {
+      @include hover-btn($bgr: $bgr-color, $color: $bgr-color);
+      background-image: url(../../../images/ellipse-active.png);
+    }
+
+    @media (max-width: 767px) {
+      width: 88px;
+      height: 42px;
+      font-size: 14px;
+    }
+  }
+}

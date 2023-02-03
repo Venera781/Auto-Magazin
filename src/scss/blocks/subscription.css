@@ -1,0 +1,44 @@
+.subscription {
+  display: contents;
+}
+@media (max-width: 1280px) {
+  .subscription {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+.subscription__form {
+  grid-area: subscription__form;
+  border-right: 1px solid #e1fd2c;
+  margin: 0;
+  padding: 50px;
+  box-sizing: border-box;
+}
+@media (max-width: 1280px) {
+  .subscription__form {
+    border: none;
+  }
+}
+.subscription__title {
+  margin: 0;
+}
+.subscription__subtitle {
+  margin: 16px 0 64px 0;
+  font-size: 19px;
+  font-weight: 400;
+  line-height: 28px;
+}
+.subscription__logo {
+  grid-area: subscription__logo;
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+.subscription__copyright {
+  margin: 0;
+  font-size: 13px;
+  line-height: 13px;
+  letter-spacing: 1px;
+}/*# sourceMappingURL=subscription.css.map */

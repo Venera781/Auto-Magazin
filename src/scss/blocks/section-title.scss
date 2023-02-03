@@ -1,0 +1,8 @@
+.section-title {
+  @include font(400, 46px, 46px);
+  margin: 0;
+
+  @media (max-width: 767px) {
+    @include font(400, 26px, 26px);
+  }
+}

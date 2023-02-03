@@ -1,0 +1,123 @@
+.gallery {
+  display: contents;
+
+  &__empty-block {
+    grid-area: gallery__empty-block;
+    @include border-line;
+
+    @media (max-width: 1280px) {
+      display: none;
+    }
+  }
+
+  &__photo {
+    @include width-pic;
+
+    @media (max-width: 1280px) {
+      margin: 32px auto 50px;
+    }
+
+    @include media-tablet-image;
+
+    @media (max-width: 1024px) {
+      margin-bottom: 0;
+    }
+
+    @media (max-width: 767px) {
+      @include width-pic;
+      margin: 0;
+    }
+
+    @include media-mobile-image;
+  }
+
+  &__slider-part2 {
+    display: flex;
+    justify-content: space-between;
+    margin: 47px 0;
+
+    @media (max-width: 767px) {
+      margin: 50px 0 0;
+    }
+
+    @media (max-width: 425px) {
+      margin: 46px 0 0;
+    }
+  }
+
+  &__title {
+    margin: 0;
+    padding-left: 50px;
+
+    @media (max-width: 1280px) {
+      padding-left: 16px;
+    }
+    @media (max-width: 425px) {
+      padding-left: 0;
+    }
+  }
+
+  &__wrapper {
+    display: flex;
+    width: auto;
+    align-items: center;
+  }
+
+  &__slider-part1 {
+    grid-area: gallery__slider-part1;
+    border-bottom: $lime-line;
+
+    @media (max-width: 1280px) {
+      padding: 0 34px;
+    }
+
+    @media (max-width: 767px) {
+      padding: 20px 19px;
+    }
+  }
+
+  &__button {
+    @include button-properties(42px, 34px);
+
+    @media (max-width: 767px) {
+      width: 23px;
+      height: 20px;
+    }
+
+    &_dir_left {
+      @include btn-for-slider(
+        $file: "arrow_left.png",
+        $bg-rep: no-repeat,
+        $bg-pos: center,
+        $margin-right: 30px,
+        $bg-size: 42px 34px
+      );
+
+      @media (max-width: 1024px) {
+      }
+
+      @media (max-width: 767px) {
+        margin: 0 16px 0 0;
+        background-size: 24px 20px;
+      }
+    }
+    &_dir_right {
+      @include btn-for-slider(
+        $file: "arrow_right.png",
+        $bg-rep: no-repeat,
+        $bg-pos: center,
+        $margin-right: 52px,
+        $bg-size: 42px 34px
+      );
+
+      @media (max-width: 1024px) {
+        margin-right: 18px;
+      }
+
+      @media (max-width: 767px) {
+        margin: 0;
+        background-size: contain;
+      }
+    }
+  }
+}
