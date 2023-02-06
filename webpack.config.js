@@ -38,7 +38,7 @@ export default (_env, argv) => {
           type: "asset/resource",
         },
         {
-          test: /\.s[ac]ss$/i,
+          test: /\.s?css$/i,
           use: [
             MiniCssExtractPlugin.loader,
             {
@@ -53,17 +53,6 @@ export default (_env, argv) => {
                 sourceMap: true,
               },
             },
-          ],
-        },
-        {
-          test: /\.css$/,
-          use: [
-            MiniCssExtractPlugin.loader,
-            {
-              loader: "css-loader",
-              options: { importLoaders: 1 },
-            },
-            "postcss-loader",
           ],
         },
         {

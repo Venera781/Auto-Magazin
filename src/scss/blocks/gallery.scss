@@ -1,58 +1,60 @@
 .gallery {
   display: contents;
 
-  &__empty-block {
-    grid-area: gallery__empty-block;
-    @include border-line;
+  &__slider-content {
+    grid-area: gallery__slider-content;
+    border-bottom: $lime-line;
+    border-right: $lime-line;
 
-    @media (max-width: 1280px) {
-      display: none;
+    @media (max-width: $desktop-width) {
+      padding: 0 34px;
+    }
+
+    @media (max-width: $mobile-width-L) {
+      padding: 20px 19px;
     }
   }
 
   &__photo {
-    @include width-pic;
-
-    @media (max-width: 1280px) {
+    @media (max-width: $desktop-width) {
       margin: 32px auto 50px;
     }
 
     @include media-tablet-image;
 
-    @media (max-width: 1024px) {
+    @media (max-width: $tablet-width) {
       margin-bottom: 0;
     }
 
-    @media (max-width: 767px) {
-      @include width-pic;
+    @media (max-width: $mobile-width-L) {
       margin: 0;
     }
 
     @include media-mobile-image;
   }
 
-  &__slider-part2 {
+  &__slider {
     display: flex;
     justify-content: space-between;
     margin: 47px 0;
 
-    @media (max-width: 767px) {
+    @media (max-width: $mobile-width-L) {
       margin: 50px 0 0;
     }
 
-    @media (max-width: 425px) {
+    @media (max-width: $mobile-width-S) {
       margin: 46px 0 0;
     }
   }
 
-  &__title {
+  &__slider-title {
     margin: 0;
     padding-left: 50px;
 
-    @media (max-width: 1280px) {
+    @media (max-width: $desktop-width) {
       padding-left: 16px;
     }
-    @media (max-width: 425px) {
+    @media (max-width: $mobile-width-S) {
       padding-left: 0;
     }
   }
@@ -63,23 +65,10 @@
     align-items: center;
   }
 
-  &__slider-part1 {
-    grid-area: gallery__slider-part1;
-    border-bottom: $lime-line;
-
-    @media (max-width: 1280px) {
-      padding: 0 34px;
-    }
-
-    @media (max-width: 767px) {
-      padding: 20px 19px;
-    }
-  }
-
-  &__button {
+  &__slider-controls {
     @include button-properties(42px, 34px);
 
-    @media (max-width: 767px) {
+    @media (max-width: $mobile-width-L) {
       width: 23px;
       height: 20px;
     }
@@ -93,10 +82,10 @@
         $bg-size: 42px 34px
       );
 
-      @media (max-width: 1024px) {
+      @media (max-width: $tablet-width) {
       }
 
-      @media (max-width: 767px) {
+      @media (max-width: $mobile-width-L) {
         margin: 0 16px 0 0;
         background-size: 24px 20px;
       }
@@ -110,11 +99,11 @@
         $bg-size: 42px 34px
       );
 
-      @media (max-width: 1024px) {
+      @media (max-width: $tablet-width) {
         margin-right: 18px;
       }
 
-      @media (max-width: 767px) {
+      @media (max-width: $mobile-width-L) {
         margin: 0;
         background-size: contain;
       }

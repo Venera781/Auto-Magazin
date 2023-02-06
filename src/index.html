@@ -21,9 +21,9 @@
   </header>
   <main class="сontent">
     <section class="slide">
-      <p class="slide__brand">volkswagen T1</p>
-      <h1 class="slide__title">Новая версия популярного микроавтобуса</h1>
-      <h2 class="slide__subtitle">С ЭЛЕКТРО ДВИГАТЕЛЕМ</h2>
+      <h1 class="slide__brand">volkswagen T1</h1>
+      <p class="slide__title">Новая версия популярного микроавтобуса</p>
+      <p class="slide__subtitle">С ЭЛЕКТРО ДВИГАТЕЛЕМ</p>
       <button class="slide__button" type="button">Подробнее</button>
       <img class="slide__photo" src="../images/bus.png" alt="Фото автобуса">
     </section>
@@ -39,35 +39,32 @@
           и&nbsp;уже готовые машины будут продавать частным клиентам.
         </p>
       </div>
-      <div class="pros-cons__container">
+      <dl class="pros-cons__container">
         <div class="pros-cons__wrapper pros-cons__advantages">
-          <h2 class="pros-cons__title pros-cons__advantages-title">ПЛЮСЫ</h2>
-          <ul class="pros-cons__list pros-cons__advantages-list">
-            <li class="pros-cons__item pros-cons__advantages-item">+ Экологичный</li>
-            <li class="pros-cons__item pros-cons__advantages-item">+ Экономный</li>
-            <li class="pros-cons__item pros-cons__advantages-item">+ Тихий</li>
-          </ul>
+          <dt class="pros-cons__title pros-cons__advantages-title">ПЛЮСЫ</dt>
+          <dd class="pros-cons__item pros-cons__advantages-item">+ Экологичный</dd>
+          <dd class="pros-cons__item pros-cons__advantages-item">+ Экономный</dd>
+          <dd class="pros-cons__item pros-cons__advantages-item">+ Тихий</dd>
         </div>
         <div class="pros-cons__wrapper pros-cons__disadvantages">
-          <h2 class="pros-cons__title pros-cons__disadvantages-title">МИНУСЫ</h2>
-          <ul class="pros-cons__list pros-cons__disadvantages-list">
-            <li class="pros-cons__item pros-cons__disadvantages-item">- Дорогой</li>
-            <li class="pros-cons__item pros-cons__disadvantages-item">- Подзарядка</li>
-          </ul>
+          <dt class="pros-cons__title pros-cons__disadvantages-title">МИНУСЫ</dt>
+          <dd class="pros-cons__item pros-cons__disadvantages-item">- Дорогой</dd>
+          <dd class="pros-cons__item pros-cons__disadvantages-item">- Подзарядка</dd>
         </div>
+      </dl>
     </section>
     <section class="gallery">
-      <div class="gallery__slider-part1">
+      <div class="gallery__slider-content">
         <img class="gallery__photo" src="../images/bus-gallery.png" alt="Фото автобуса">
-        <div class="gallery__slider-part2">
-          <h2 class="section-title gallery__title">Галерея</h2>
+        <div class="gallery__slider">
+          <h2 class="section-title gallery__slider-title">Галерея</h2>
           <div class="gallery__wrapper">
-            <button type="button" class="gallery__button gallery__button_dir_left active-el"></button>
-            <button type="button" class="gallery__button gallery__button_dir_right active-el"></button>
+            <button type="button" class="gallery__slider-controls gallery__slider-controls_dir_left active-el"></button>
+            <button type="button"
+              class="gallery__slider-controls gallery__slider-controls_dir_right active-el"></button>
           </div>
         </div>
       </div>
-      <div class="gallery__empty-block"></div>
     </section>
     <section class="press">
       <h2 class="section-title press__title">Пресса</h2>
@@ -87,24 +84,23 @@
         <h2 class="section-title subscription__title">Подписка</h2>
         <p class="subscription__subtitle">На новые спецвыпуски машин.</p>
         <form action="#" class="form" name="subcriptionForm">
-          <fieldset class="form__container">
-            <div class="form__wrapper">
-              <input class="form__input form__name" type="text" name="name" value="" required autocomplete="off"
-                placeholder="Имя">
-              <input class="form__input form__surname" type="text" name="surname" value="" required autocomplete="off"
-                placeholder="Фамилия">
-            </div>
-            <div class="form__wrapper">
-              <input class="form__input form__email" type="email" name="email" autocomplete="off" required
-                placeholder="Почта">
-              <button type="submit" class="button form__button">Подписка</button>
-            </div>
-          </fieldset>
+          <div class="form__container">
+
+            <input class="form__input form__name" type="text" name="name" value="" required autocomplete="off"
+              placeholder="Имя">
+            <input class="form__input form__surname" type="text" name="surname" value="" required autocomplete="off"
+              placeholder="Фамилия">
+
+            <input class="form__input form__email" type="email" name="email" autocomplete="off" required
+              placeholder="Почта">
+            <button type="submit" class="button form__button">Подписка</button>
+
+          </div>
         </form>
       </div>
       <div class="subscription__logo">
         <a href="#" class="logo logo_type_footer"></a>
-        <p class="subscription__copyright">&copy;&nbsp; Auto-Magazine 2021</p>
+        <p class="subscription__copyright">&copy;Auto-Magazine 2021</p>
       </div>
     </section>
   </main>

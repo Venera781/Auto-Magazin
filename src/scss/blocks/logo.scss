@@ -8,9 +8,6 @@
   height: 38px;
   margin-left: 0;
 
-  @media (max-width: 1280px) {
-  }
-
   &_default {
     display: none;
   }
@@ -18,12 +15,12 @@
   &_type_header {
     margin-left: 397px;
 
-    @media (max-width: 1280px) {
+    @media (max-width: $desktop-width) {
       margin-left: auto;
       margin-right: auto;
     }
 
-    @media (max-width: 767px) {
+    @media (max-width: $mobile-width-L) {
       width: 100px;
       height: 20px;
     }
@@ -32,7 +29,7 @@
   &_type_footer {
     margin-right: 0;
 
-    @media (max-width: 767px) {
+    @media (max-width: $mobile-width-L) {
       width: 280px;
       height: 58px;
       margin: 120px 0 20px 0;

@@ -10,7 +10,7 @@ burger.addEventListener('click', () => {
 })
 
 //После отправки кнопки "Подписка"
-let submit = document.querySelector('.form__button');
+const submit = document.querySelector('.form__button');
 submit.addEventListener('click', () => {
     submit.textContent = 'Готово';  
 })

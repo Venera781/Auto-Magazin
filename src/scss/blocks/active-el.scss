@@ -1,9 +1,7 @@
 .active-el {
-    transition: opacity 0.2s linear;
+  transition: opacity 0.2s linear;
 
-    &:hover {
-        opacity: 0.5;
-      }
+  &:hover {
+    opacity: 0.5;
   }
-  
-  
+}

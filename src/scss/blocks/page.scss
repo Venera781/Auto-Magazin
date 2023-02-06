@@ -4,9 +4,7 @@
   color: $main-color;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
-  -webkit-text-size-adjust: 100%;
-  -ms-text-size-adjust: 100%;
-  -moz-text-size-adjust: 100%;
+  text-size-adjust: 100%;
   text-rendering: optimizeLegibility;
   max-width: 1440px;
   min-width: 320px;
@@ -17,17 +15,17 @@
     "menu                    menu"
     "slide                   slide"
     "pros-cons__description  pros-cons__container"
-    "gallery__slider-part1   gallery__empty-block"
+    "gallery__slider-content   ..."
     "press__title            press__news"
     "subscription__form      subscription__logo";
 
-  @media (max-width: 1280px) {
+  @media (max-width: $desktop-width) {
     display: flex;
     flex-direction: column;
     justify-content: center;
   }
 
-  @media (max-width: 1024px) {
+  @media (max-width: $tablet-width) {
     flex-direction: column;
     margin: 0;
   }
