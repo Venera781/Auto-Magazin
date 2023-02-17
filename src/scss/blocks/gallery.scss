@@ -1,7 +1,4 @@
 .gallery {
-  display: contents;
-
-  &__slider-content {
     grid-area: gallery__slider-content;
     border-bottom: $lime-line;
     border-right: $lime-line;
@@ -13,7 +10,6 @@
     @media (max-width: $mobile-width-L) {
       padding: 20px 19px;
     }
-  }
 
   &__photo {
     @media (max-width: $desktop-width) {
@@ -33,7 +29,7 @@
     @include media-mobile-image;
   }
 
-  &__slider {
+  &__container {
     display: flex;
     justify-content: space-between;
     margin: 47px 0;
@@ -47,7 +43,7 @@
     }
   }
 
-  &__slider-title {
+  &__title {
     margin: 0;
     padding-left: 50px;
 
@@ -63,9 +59,10 @@
     display: flex;
     width: auto;
     align-items: center;
+    list-style: none;
   }
 
-  &__slider-controls {
+  &__controls {
     @include button-properties(42px, 34px);
 
     @media (max-width: $mobile-width-L) {

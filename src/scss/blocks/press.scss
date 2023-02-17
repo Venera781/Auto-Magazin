@@ -12,19 +12,6 @@
       display: none;
     }
   }
-
-  &__news {
-    grid-area: press__news;
-    padding: 50px 50px 50px;
-    @include border-line;
-    border-top: $lime-line;
-
-    @media (max-width: $mobile-width-M) {
-      border-left: none;
-      padding: 20px;
-    }
-  }
-
   &__news-normal {
     margin: 0 0 263px 0;
     @include font(300, 30px, 42px);
@@ -42,9 +29,23 @@
     font-weight: 400;
   }
 
+  &__news {
+    grid-area: press__news;
+    @include border-line;
+    border-top: $lime-line;
+    margin: 0;
+    padding: 50px 50px 50px;
+    list-style: none;
+    @media (max-width: $mobile-width-M) {
+      border-left: none;
+      padding: 20px;
+    }
+  }
   &__wrapper {
     display: flex;
-    align-items: flex-end;
+    margin-top: -26px;
+    margin-bottom: 0;
+    list-style: none;
   }
 
   &__container {
@@ -58,29 +59,5 @@
 
   &__circle-button_active {
     @include circle-button($file: "circle_btn_active.png");
-  }
-
-  &__button {
-    background-image: url(../../../images/ellipse.svg);
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-color: $bgr-color;
-    color: $main-color;
-    padding: 0;
-    border: none;
-    width: 110px;
-    height: 52px;
-    @include font(400, 19px, 28px);
-
-    &:hover {
-      @include hover-btn($bgr: $bgr-color, $color: $bgr-color);
-      background-image: url(../../../images/ellipse-active.png);
-    }
-
-    @media (max-width: $mobile-width-M) {
-      width: 88px;
-      height: 42px;
-      font-size: 14px;
-    }
   }
 }

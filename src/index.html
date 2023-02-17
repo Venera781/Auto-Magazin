@@ -25,7 +25,7 @@
       <p class="slide__title">Новая версия популярного микроавтобуса</p>
       <p class="slide__subtitle">С ЭЛЕКТРО ДВИГАТЕЛЕМ</p>
       <button class="slide__button" type="button">Подробнее</button>
-      <img class="slide__photo" src="../images/bus.png" alt="Фото автобуса">
+      <img class="slide__photo" src="../images/bus.png   " alt="Фото автобуса">
     </section>
     <section class="pros-cons">
       <div class="pros-cons__description">
@@ -54,30 +54,48 @@
       </dl>
     </section>
     <section class="gallery">
-      <div class="gallery__slider-content">
-        <img class="gallery__photo" src="../images/bus-gallery.png" alt="Фото автобуса">
-        <div class="gallery__slider">
-          <h2 class="section-title gallery__slider-title">Галерея</h2>
-          <div class="gallery__wrapper">
-            <button type="button" class="gallery__slider-controls gallery__slider-controls_dir_left active-el"></button>
-            <button type="button"
-              class="gallery__slider-controls gallery__slider-controls_dir_right active-el"></button>
-          </div>
+      <ul class="slider">
+        <li class="slider__slide slider__slide_visible">
+          <img class="gallery__photo" src="../images/bus-gallery.png" alt="Фото автобуса">
+        </li>
+        <li class="slider__slide">
+          <img class="gallery__photo" src="../images/gallery-slider-1.jpg" alt="Фото cалона автобуса">
+        </li>
+        <li class="slider__slide">
+          <img class="gallery__photo" src="../images/galery-slider-2.png" alt="Фото cалона автобуса">
+        </li>
+        <div class="gallery__container">
+          <h2 class="section-title gallery__title">Галерея</h2>
+          <ul class="gallery__wrapper">
+            <li><button type="button" class="gallery__controls gallery__controls_dir_left active-el"></button></li>
+            <li><button type="button" class="gallery__controls gallery__controls_dir_right active-el"></button></li>
+          </ul>
         </div>
-      </div>
     </section>
     <section class="press">
       <h2 class="section-title press__title">Пресса</h2>
       <div class="press__news">
-        <p class="press__news-normal"><span class="press__news-bold">Engadget:</span> VW’s e-BULLI concept shows how
-          your classic van can become an EV.</p>
-        <div class="press__container">
-          <div class="press__wrapper">
-            <button type="button" class="press__circle-button press__circle-button_active active-el"></button>
-            <button type="button" class="press__circle-button active-el"></button>
-          </div>
-          <button type="button" class="press__button">Читать</button>
-        </div>
+        <ul class="slider">
+          <li class="slider__slide slider__slide_visible">
+            <p class="press__news-normal">
+              <span class="press__news-bold">Engadget:</span> VW’s e-BULLI concept shows how
+              your classic van can become an EV.
+            </p>
+          </li>
+          <li class="slider__slide">
+            <p class="press__news-normal">
+              <span class="press__news-bold"></span> Drive.ru:</span> Вэн Volkswagen e-Bulli скрестил классику с
+              современной техникой.
+            </p>
+          </li>
+          <a href="https://www.engadget.com/2020-03-20-vw-unveils-e-bulli-t1-electric-conversion.html"
+            class="slider__link">Читать</a>
+        </ul>
+        <ul class="press__wrapper">
+          <li><button type="button" class="press__circle-button press__circle-button_active active-el"></button></li>
+          <li><button type="button" class="press__circle-button active-el"></button></li>
+        </ul>
+      </div>
     </section>
     <section class="subscription">
       <div class="subscription__form">

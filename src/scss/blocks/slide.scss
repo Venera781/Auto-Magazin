@@ -90,7 +90,6 @@
       width: 280px;
     }
   }
-
   &__photo {
     grid-row: 1/8;
     grid-column: 3/4;
@@ -101,7 +100,6 @@
       margin: 0 auto;
     }
     @include media-tablet-image;
-
     @include media-mobile-image;
   }
 }
