@@ -1,0 +1,29 @@
+.burger {
+  display: none;
+  position: absolute;
+  @include button-simple-size(26px, 26px);
+  @include btn-burger-properties(
+    $file: "burger-menu.png",
+    $right: 34px,
+    $bg-size: 26px 20px
+  );
+  align-self: center;
+
+  @media (max-width: $desktop-width) {
+    display: block;
+  }
+
+  @media (max-width: $mobile-width-L) {
+    @include button-simple-size(20px, 16px);
+    @include btn-burger-properties(
+      $file: "burger_mobile.png",
+      $right: 20px,
+      $bg-size: 20px 16px
+    );
+  }
+
+  &_active {
+    background-image: url(../../../images/close.png);
+    background-size: 26px 26px;
+  }
+}

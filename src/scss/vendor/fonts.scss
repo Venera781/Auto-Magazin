@@ -1,0 +1,12 @@
+@mixin font($name, $file, $weight, $style: normal) {
+  @font-face {
+    font-family: $name;
+    src: url("./fonts/#{$file}.woff2") format("woff2"),
+      url("./fonts/#{$file}.woff") format("woff");
+    font-weight: $weight;
+    font-style: $style;
+  }
+}
+
+@include font("Source Sans Pro", sourcesanspro, 400);
+@include font("Source Sans Pro", sourcesansprolight, 300);

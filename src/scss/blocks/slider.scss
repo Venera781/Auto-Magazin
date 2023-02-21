@@ -1,0 +1,53 @@
+.slider {
+  display: grid;
+  margin: 0;
+  padding: 0;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  grid-template-areas: "slide";
+
+  &__slide {
+    grid-area: slide;
+    z-index: 0;
+    list-style: none;
+    visibility: hidden;
+
+    &_visible {
+      z-index: 1;
+      visibility: visible;
+    }
+  }
+
+  &__link {
+    margin-left: auto;
+    margin-right: 0;
+    color: $main-color;
+    text-decoration: none;
+    padding: 10px;
+    width: 110px;
+    height: 52px;
+    @include font(400, 19px, 28px);
+    text-align: center;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    background-color: $bgr-color;
+    border: $lime-line;
+    color: $main-color;
+    border-radius: 50%;
+    box-sizing: border-box;
+
+    @media (max-width: $mobile-width-S) {
+      width: 88px;
+      height: 42px;
+      padding: 5px;
+      @include font(400, 14px, 28px);
+    }
+
+    &:hover {
+      background-color: $main-color;
+      color: $bgr-color;
+      cursor: pointer;
+    }
+  }
+}

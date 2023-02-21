@@ -1,0 +1,8 @@
+.section-title {
+  @include font(400, 46px, 46px);
+  margin: 0;
+
+  @media (max-width: $mobile-width-L) {
+    @include font(400, 26px, 26px);
+  }
+}
